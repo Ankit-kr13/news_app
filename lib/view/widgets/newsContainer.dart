@@ -5,12 +5,14 @@ class NewsContainer extends StatelessWidget {
   String newsHeading;
   String newsDescrition;
   String newsUrl;
+  String newsContent;
   NewsContainer(
       {super.key,
       required this.imgUrl,
       required this.newsHeading,
       required this.newsDescrition,
-      required this.newsUrl});
+      required this.newsUrl,
+      required this.newsContent});
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +42,14 @@ class NewsContainer extends StatelessWidget {
                 SizedBox(
                   height: 10,
                 ),
-                Text(newsDescrition),
+                SizedBox(
+                  height: 10,
+                ),
+                Text(
+                  newsDescrition,
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                ),
+                Text(newsContent),
               ],
             ),
           ),
